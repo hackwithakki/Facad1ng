@@ -1,2 +1,126 @@
-# Facad1ng
-The Ultimate URL Masking Tool - An open-source URL masking tool designed to help you Hide Phishing URLs and make them look legit using social engineering techniques.
+<h4 align="center"> If you find this GitHub repo useful, please consider giving it a star! ⭐️ </h4> 
+<img width="100%" align="centre" src="image/afa.png" />
+
+Facad1ng is an open-source URL masking tool designed to help you Hide Phishing URLs and make them look legit using social engineering techniques.
+
+> [!IMPORTANT]
+> This tool is a Proof of Concept and is for Educational Purposes Only.
+
+### Example:
+```
+Your phishing link: https://example.com/whatever
+
+Give any custom URL: instagram.com
+
+Phishing keyword: anything-u-want
+
+Output: https://instagram.com-anything-u-want@tinyurl.com/yourlink
+
+# Get 4 masked URLs like this from different URL-shortener 
+
+```
+
+---
+
+### ⭔ Key Features:
+
+- **URL Masking**: Facad1ng allows users to mask URLs with a custom domain and optional phishing keywords, making it difficult to identify the actual link.
+
+- **Multiple URL Shorteners**: The tool supports multiple URL shorteners, providing flexibility in choosing the one that best suits your needs. Currently, it supports popular services like TinyURL, osdb, dagd, and clckru.
+
+- **Input Validation**: Facad1ng includes robust input validation to ensure that URLs, custom domains, and phishing keywords meet the required criteria, preventing errors and enhancing security.
+
+- **User-Friendly Interface**: Its simple and intuitive interface makes it accessible to both novice and experienced users, eliminating the need for complex command-line inputs.
+
+- **Open Source**: Being an open-source project, Facad1ng is transparent and community-driven. Users can contribute to its development and suggest improvements.
+
+---
+
+<h4 align="center">
+  OS compatibility :
+  <br><br>
+  <img src="https://img.shields.io/badge/Windows-05122A?style=for-the-badge&logo=windows">
+  <img src="https://img.shields.io/badge/Linux-05122A?style=for-the-badge&logo=linux">
+  <img src="https://img.shields.io/badge/Android-05122A?style=for-the-badge&logo=android">
+  <img src="https://img.shields.io/badge/macOS-05122A?style=for-the-badge&logo=macos">
+</h4>
+
+<h4 align="center"> 
+Requirements:
+<br><br>
+<img src="https://img.shields.io/badge/Python-05122A?style=for-the-badge&logo=python">
+<img src="https://img.shields.io/badge/Git-05122A?style=for-the-badge&logo=git">
+</h4>
+
+### ⭔ Git Installation
+---
+
+```
+git clone https://github.com/hackwithakki/Facad1ng.git
+```
+```
+cd Facad1ng
+```
+```
+pip3 install -r requirements.txt
+```
+```
+python3 facad1ng.py
+
+```
+
+#### How To Run On CLI:
+```
+Facad1ng <your-phishing-link> <any-custom-domain> <any-phishing-keyword>
+```
+```
+Example: Facad1ng https://ngrok.com instagram.com accout-login
+```
+### Python code:
+```py
+import subprocess
+
+# Define the command to run your Facad1ng script with arguments
+command = ["python3", "-m", "Facad1ng.main", "https://ngrok.com", "facebook.com", "login"]
+
+# Run the command
+process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+# Wait for the process to complete and get the output
+stdout, stderr = process.communicate()
+
+# Print the output and error (if any)
+print("Output:")
+print(stdout.decode())
+print("Error:")
+print(stderr.decode())
+
+# Check the return code to see if the process was successful
+if process.returncode == 0:
+    print("Facad1ng completed successfully.")
+else:
+    print("Facad1ng encountered an error.")
+```
+
+---
+
+## Contribution:
+
+Contributions and feature requests are welcome! If you encounter any issues or have ideas for improvement, feel free to open an issue or submit a pull request.
+
+#### 😴🥱😪💤 ToDo:
+
+- Fix trycloudflare error which is blocked by TinyURL 
+
+TinyURL not shorting trycloudflare
+Solution: don’t use pyshortner. shorten links manually one by one if TinyURL blocks try using different shortener
+
+#### 💬 If having an issue [Chat here](https://discord.com/invite/EKRBuAWN)
+[![Discord Server](https://discord.com/api/guilds/726495265330298973/embed.png)](https://discord.com/invite/EKRBuAWN)
+
+### ⭔ Snapshots:
+---
+
+<img width="100%" align="centre" src="image/Screenshot 2024-09-08 165425.png" />
+
+<h4 align="center"> If you find this GitHub repo useful, please consider giving it a star! ⭐️ </h4> 
